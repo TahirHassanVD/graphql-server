@@ -1,4 +1,4 @@
-const paitents = require('./data.json');
+const patients = require('./data.json');
 const { ApolloServer, gql } = require('apollo-server');
 
 // A schema is a collection of type definitions (hence "typeDefs")
@@ -7,8 +7,8 @@ const { ApolloServer, gql } = require('apollo-server');
 const typeDefs = gql`
   # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
 
-  # This "Paitent" type defines the queryable fields for every paitent in our data source.
-  type Paitent {
+  # This "Patient" type defines the queryable fields for every Patient in our data source.
+  type Patient {
     patientId: String
     claimId: String
     lineNumber: String
@@ -32,17 +32,17 @@ const typeDefs = gql`
 
   # The "Query" type is special: it lists all of the available queries that
   # clients can execute, along with the return type for each. In this
-  # case, the "paitents" query returns an array of zero or more Paitents (defined above).
+  # case, the "patients" query returns an array of zero or more patients (defined above).
   type Query {
-    paitents: [Paitent]
+    patients: [Patient]
   }
 `;
 
 // Resolvers define the technique for fetching the types defined in the
-// schema. This resolver retrieves paitents from the "paitents" array above.
+// schema. This resolver retrieves patients from the "patients" array above.
 const resolvers = {
   Query: {
-    paitents: () => paitents
+    patients: () => patients
   }
 };
 
