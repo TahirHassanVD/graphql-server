@@ -9,25 +9,25 @@ const typeDefs = gql`
 
   # This "Paitent" type defines the queryable fields for every paitent in our data source.
   type Paitent {
-    patient_id: String
-    claim_id: String
-    line_number: String
-    procedure_code: String
-    provider_id: String
-    practice_id: String
-    date_of_birth: String
-    data_of_service: String
-    tooth_number: String
+    patientId: String
+    claimId: String
+    lineNumber: String
+    procedureCode: String
+    providerId: String
+    practiceId: String
+    dateOfBirth: String
+    dataOfService: String
+    toothNumber: String
     quadrant: String
-    product_id: String
-    image_id: String
+    productId: String
+    imageId: String
     reviewed: String
-    review_result: String
-    allowed_amount: String
-    approved_amount: String
-    patient_state: String
-    overjet_review_results: String
-    client_response_code: String
+    reviewResult: String
+    allowedAmount: String
+    approvedAmount: String
+    patientState: String
+    overjetReviewResults: String
+    clientResponseCode: String
   }
 
   # The "Query" type is special: it lists all of the available queries that
